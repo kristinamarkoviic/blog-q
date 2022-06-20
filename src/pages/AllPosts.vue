@@ -106,9 +106,6 @@ export default {
         name: "SinglePost",
         params: { id: postId }
       })
-    },
-    search(params) {
-
     }
   },
   components: {
