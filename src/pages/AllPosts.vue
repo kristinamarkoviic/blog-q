@@ -108,8 +108,5 @@ export default {
       })
     }
   },
-  components: {
-    
-  },
 }
 </script>
