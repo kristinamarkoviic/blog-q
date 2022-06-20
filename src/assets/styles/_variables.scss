@@ -1,0 +1,22 @@
+@import './fonts.scss';
+//colors
+$color-primary: #aaaaaa;
+$color-secondary: #484848;
+$color-brand: #d14301;
+$color-white: #fff;
+$color-black: #000;
+$color-page: #f6f6f6;
+$color-border: #eee;
+$color-light-background: rgb(247, 173, 122, 0.40);
+
+//fonts
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
+$font-base: "MontserratRegular", arial, sans-serif;
+$font-heading: "MontserratBold", Arial, sans-serif;
+$base-font-size: 14px;
+
+//spacing
+$padding-default: 0 25px;

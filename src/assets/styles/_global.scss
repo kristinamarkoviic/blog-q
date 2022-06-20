@@ -1,0 +1,187 @@
+@import './variables';
+@import './responsive';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-base;
+}
+
+.page-wrapper {
+    background-color: $color-page;
+    .container {
+        width: 100%;
+        padding-top: 50px;
+        .search-form {
+            position: absolute;
+            top: 10px;
+            display: block;
+            width: 100%;
+            .search-field {
+                display: block;
+                margin: 0 auto;
+                height: 40px;
+                width: 250px;
+                padding: 10px;
+                line-height: 40px;
+                background-color: #fff;
+                border: 1px solid #eee;
+                box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 13%);
+            }
+        }
+        .posts {
+            margin: 0 auto;
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+        }
+        .single-post {
+            height: 100%;
+            max-height: 100%;
+            min-height: 310px;
+            width: 345px;
+            position: relative;
+            margin: 10px;
+            background-color: $color-white;
+            box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 13%);
+
+            .post-author {
+                padding: $padding-default;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                margin-bottom: 25px;
+                background-color: $color-light-background;
+                text-transform: capitalize;
+                font-size: 12px;
+
+                .author-placeholder {
+                    font-family: $font-heading;
+                    padding-right: 10px;
+                }
+            }
+            .post-information {
+                padding: $padding-default;
+            }
+
+            .post-title {
+                font-size: 14px;
+                text-transform: uppercase;
+                color: $color-secondary;
+                font-family: $font-heading;
+                margin-bottom: 15px;
+                transition: 0.2s color ease-in;
+
+                &:hover {
+                    cursor: pointer;
+                    color: $color-brand;
+                }
+            }
+            .post-description {
+                color: $color-primary;
+                font-size: 14px;
+                line-height: 1.5;
+
+                &:first-letter {
+                    text-transform: uppercase;
+                }
+            }
+            .post-read-link {
+                display: block;
+                text-align: right;
+                text-transform: uppercase;
+                font-family: $font-heading;
+                width: 70px;
+                color: $color-white;
+                background-color: $color-primary;
+                height: 40px;
+                padding: 10px;
+                transition: 0.2s background-color ease-in;
+                position: absolute;
+                bottom: 15px;
+                right: 25px;
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: $color-brand;
+                }
+            }  
+        }
+    }
+
+    &.single-post-wrapper {
+        .container {
+            .single-post {
+                width: 80%;
+                margin: 0 auto;
+                display: flex;
+                .post-title {
+                    font-size: 18px;
+                    border-bottom: 1px solid $color-primary;
+                    padding: 20px 0 10px;
+
+                    &:hover {
+                        cursor: default;
+                        color: $color-secondary;
+                    }
+                }
+                .post-label {
+                    font-family: $font-heading;
+                    color: $color-secondary;
+                }
+                .post-back-link {
+                    position: absolute;
+                    top: 5px;
+                    right: 25px;
+                    color: $color-brand;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+                .post-comments {
+                    padding: $padding-default;
+                    .single-comment {
+                        padding-bottom: 15px;
+                        .comments-author {
+                            font-size: 14px;
+                            color: $color-brand;
+                        } 
+                    }
+                    .comments-title {
+                        .comment-text {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+.loader {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+  
+    &::after {
+      content: " ";
+      display: block;
+      width: 50px;
+      height: 50px;
+      margin: 8px;
+      border-radius: 50%;
+      border: 6px solid #D14301;
+      border-color: #fff transparent #D14301 transparent;
+      animation: loader 1.2s linear infinite;
+    }
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
